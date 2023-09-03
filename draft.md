@@ -81,7 +81,7 @@ ___
 ### D [统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty/)
 
 > 排序+计数：当 $k>26$ 时显然不存在 $k$ 子序列，所以答案为 $0$。当 $k\le 26$ 时，将字符出现次数数组 $f$ 降序排序，设排序后的 $f$ 中大小关系有：$$f_0\ge\cdots>f_l=\cdots=f_{k-1}=\cdots=f_r>\cdots$$
-则在美丽值最大的 $k$ 子序列中，前 $l$  个不同字符是必选的，之后会在 $[l,r]$ 范围内选 $k-l$ 个不同的字符，所以答案即为（注意取模）： $$\left ( \prod_{k=0}^{k<l} f_k \right ) \times \binom{r-l+1}{k-l} \times (f_{k-1})^{k-l}$$
+则在美丽值最大的 $k$ 子序列中，前 $l$  个不同字符是必选的，之后会在 $[l,r]$ 范围内选 $k-l$ 个不同的字符，所以答案即为（注意取模）： $$\left ( \prod_{i=0}^{i<l} f_i \right ) \times \binom{r-l+1}{k-l} \times (f_{k-1})^{k-l}$$
 
 ```cpp
 class Solution {
@@ -132,6 +132,6 @@ public:
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MDUyNTYwMSw4MzMxODE4OTcsMTg1Nj
+eyJoaXN0b3J5IjpbMTc3NjAxMTEwMyw4MzMxODE4OTcsMTg1Nj
 gyODI5MV19
 -->
