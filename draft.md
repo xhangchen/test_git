@@ -1,5 +1,5 @@
 
-$bfs$：将字符串序列化为层次遍历生成的字符串，非空节点在字符串中为其节点值，空节点为字符串`null`，节点之间用`,`分割，遍历完后chu'qu末尾连续的`null`
+$bfs$：将字符串序列化为层次遍历生成的字符串，非空节点在字符串中为其节点值，空节点为字符串`null`，节点之间用`,`分割，遍历完后去掉末尾连续的`null`。反序列的过程类似，可以用 `reference_wrapper` 将指针的
 
 ```cpp
 
@@ -60,6 +60,6 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mzg0MTkzNTMsMTIzNzI5MjE4NSwxNz
-c2MDExMTAzLDgzMzE4MTg5NywxODU2ODI4MjkxXX0=
+eyJoaXN0b3J5IjpbNDUwMDY4ODI2LDEyMzcyOTIxODUsMTc3Nj
+AxMTEwMyw4MzMxODE4OTcsMTg1NjgyODI5MV19
 -->
