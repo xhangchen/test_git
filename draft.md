@@ -1,4 +1,3 @@
-
 层次遍历：将字符串序列化为层次遍历生成的字符串，非空节点在字符串中为其节点值，空节点为字符串`null`，节点之间用`,`分割，遍历完后去掉末尾连续的`null`。反序列的过程类似，实现可以用 `reference_wrapper` 将指针的 “引用” 放入队列，之后再对其赋值。
 
 ```cpp
@@ -15,7 +14,7 @@ public:
         while (!q.empty()) {//层次遍历
             auto cur = q.front();
             q.pop();
-            if (cur) {
+            if (cur) {//非空节点
                 res.append(to_string(cur->val) + ",");
                 q.push(cur->left);
                 q.push(cur->right);
@@ -38,16 +37,16 @@ public:
         queue<reference_wrapper<TreeNode *>> q;// 存放指针的“引用”
         q.push(cur);
         int i = 1;
-        while (i < data.size() && !q.empty()) {
+        while (i < data.size() && !q.empty()) {//层次遍历
             auto cur = q.front();
             q.pop();
-            if (data[i] == ch_null[0]) {
+            if (data[i] == ch_null[0]) {//空节点
                 i += 5;
             } else {
                 int j = i;
                 while (isdigit(data[j + 1]))
                     j++;
-                cur.get() = new TreeNode(stoi(data.substr(i, j - i + 1)));
+                cur.get() = new TreeNode(stoi(data.substr(i, j - i + 1)));//当前位置创建节点
                 q.push(ref(cur.get()->left));
                 q.push(ref(cur.get()->right));
                 i = j + 2;
@@ -58,6 +57,6 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTczMTk0NzU5LDEyMzcyOTIxODUsMTc3Nj
-AxMTEwMyw4MzMxODE4OTcsMTg1NjgyODI5MV19
+eyJoaXN0b3J5IjpbLTE5MjI5NjMxNzAsMTIzNzI5MjE4NSwxNz
+c2MDExMTAzLDgzMzE4MTg5NywxODU2ODI4MjkxXX0=
 -->
