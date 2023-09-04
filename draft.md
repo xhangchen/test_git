@@ -1,5 +1,4 @@
-前序遍历：将字符串序列化为前序遍历生成的字符串，非空节点在字符串中为其节点值，节点之间用`,`分割。yi反序列的过程类似，实现可以用 `reference_wrapper` 将指针的 “引用” 放入队列，之后再对其赋值。
-
+前序遍历：将字符串序列化为前序遍历生成的字符串，非空节点在字符串中为其节点值，节点之间用`,`分割。因为是不含相同值的二叉搜索树，所以反序列可以由前序遍历的结果反推树的结构。
 ```cpp
 class Codec {
 public:
@@ -62,7 +61,7 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMzQ0NDgxOCwtMTkyMjk2MzE3MCwxMj
-M3MjkyMTg1LDE3NzYwMTExMDMsODMzMTgxODk3LDE4NTY4Mjgy
-OTFdfQ==
+eyJoaXN0b3J5IjpbODI3MjI0NzU4LC0xOTIyOTYzMTcwLDEyMz
+cyOTIxODUsMTc3NjAxMTEwMyw4MzMxODE4OTcsMTg1NjgyODI5
+MV19
 -->
