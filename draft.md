@@ -1,4 +1,4 @@
-层次遍历：将字符串序列化为层次遍历生成的字符串，非空节点在字符串中为其节点值，空节点为字符串`null`，节点之间用`,`分割，遍历完后去掉末尾连续的`null`。反序列的过程类似，实现可以用 `reference_wrapper` 将指针的 “引用” 放入队列，之后再对其赋值。
+层次遍历：将字符串序列化为层次遍历生成的字符串，非空节点在字符串中为其节点值，空节点为字符串`null`，节点之间用`,`分割，遍历完后去掉末尾连续的`null`。反序列的过程类似，实现可以用 `reference_wrapper` 将指针的 “引用” 放入队列，之后再对其赋值。~~另外用这种算法可以直接将leetcode的测试用例反序列化为~~
 
 ```cpp
 
@@ -57,6 +57,6 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjI5NjMxNzAsMTIzNzI5MjE4NSwxNz
-c2MDExMTAzLDgzMzE4MTg5NywxODU2ODI4MjkxXX0=
+eyJoaXN0b3J5IjpbMTQyMDA2NTA2OCwxMjM3MjkyMTg1LDE3Nz
+YwMTExMDMsODMzMTgxODk3LDE4NTY4MjgyOTFdfQ==
 -->
