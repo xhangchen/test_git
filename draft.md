@@ -6,7 +6,7 @@ public:
     // Encodes a tree to a single string.
     string serialize(TreeNode *root) {
         string res;
-        function<void(TreeNode *)> dfs = [&](TreeNode *cur) {
+        function<void(TreeNode *)> dfs = [&](TreeNode *cur) {//先序遍历
             if (!cur)
                 return;
             res.append(to_string(cur->val) + ",");
@@ -21,12 +21,7 @@ public:
 
     // Decodes your encoded data to tree.
     TreeNode *deserialize(string data) {
-        //
-        auto scan = [&data](int s, int e, int &val) {
-            if (s > e) {
-                val = 0;
-                return s;
-            }
+        auto scan = [&data](int s, int e, int &val) {//扫描data[s]开头的数val,fan
             val = data[s] - '0';
             while (s + 1 <= e && isdigit(data[s + 1]))
                 val = val * 10 + data[++s] - '0';
@@ -36,7 +31,6 @@ public:
         function<TreeNode *(int, int)> get_root = [&](int s, int e) -> TreeNode * {
             if (s > e)
                 return nullptr;
-
             int i, val_root;
             i = scan(s, e, val_root);
             TreeNode *root = new TreeNode(val_root);
@@ -46,8 +40,6 @@ public:
                 if (tmp < val_root)
                     j = last + 2;
                 else {
-                    if (!isdigit(data[i + 2]) || !isdigit(data[j]))
-                        int bp = 1;
                     root->left = get_root(i + 2, j - 2);
                     root->right = get_root(j, e);
                     return root;
@@ -61,7 +53,7 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI3MjI0NzU4LC0xOTIyOTYzMTcwLDEyMz
+eyJoaXN0b3J5IjpbMzkxMDkxNTg0LC0xOTIyOTYzMTcwLDEyMz
 cyOTIxODUsMTc3NjAxMTEwMyw4MzMxODE4OTcsMTg1NjgyODI5
 MV19
 -->
