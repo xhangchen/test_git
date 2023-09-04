@@ -7,13 +7,12 @@ class Codec {
 public:
     string ch_null = "null";//空指针标志
 
-    // Encodes a tree to a single string.
     string serialize(TreeNode *root) {
         string res;
         queue<TreeNode *> q;
         q.push(root);
         res.push_back('[');//字符串开头
-        while (!q.empty()) {
+        while (!q.empty()) {//层次遍历
             auto cur = q.front();
             q.pop();
             if (cur) {
@@ -31,13 +30,12 @@ public:
         return res;
     }
 
-    // Decodes your encoded data to tree.
     TreeNode *deserialize(string data) {
-        if (data.size() == 2)
+        if (data.size() == 2)//空树
             return nullptr;
         TreeNode *root = nullptr;
         reference_wrapper<TreeNode *> cur = root;
-        queue<reference_wrapper<TreeNode *>> q;
+        queue<reference_wrapper<TreeNode *>> q;// 存放指针的“引用”
         q.push(cur);
         int i = 1;
         while (i < data.size() && !q.empty()) {
@@ -60,6 +58,6 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM5MzQ3MzMsMTIzNzI5MjE4NSwxNzc2MD
-ExMTAzLDgzMzE4MTg5NywxODU2ODI4MjkxXX0=
+eyJoaXN0b3J5IjpbNTczMTk0NzU5LDEyMzcyOTIxODUsMTc3Nj
+AxMTEwMyw4MzMxODE4OTcsMTg1NjgyODI5MV19
 -->
