@@ -21,7 +21,7 @@ public:
 
     // Decodes your encoded data to tree.
     TreeNode *deserialize(string data) {
-        auto scan = [&data](int s, int e, int &val) {//扫描data[s]开头的数val,fan
+        auto scan = [&data](int s, int e, int &val) {//扫描data[s]开头的数val,返回其最后数位的下标
             val = data[s] - '0';
             while (s + 1 <= e && isdigit(data[s + 1]))
                 val = val * 10 + data[++s] - '0';
@@ -40,12 +40,12 @@ public:
                 if (tmp < val_root)
                     j = last + 2;
                 else {
-                    root->left = get_root(i + 2, j - 2);
-                    root->right = get_root(j, e);
+                    root->left = get_root(i + 2, j - 2);//生成左子树
+                    root->right = get_root(j, e);//生成右子树
                     return root;
                 }
             }
-            root->left = get_root(i + 2, e);
+            root->left = get_root(i + 2, e);//只有左子树的情况
             return root;
         };
         return get_root(0, data.size() - 1);
@@ -53,7 +53,7 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkxMDkxNTg0LC0xOTIyOTYzMTcwLDEyMz
-cyOTIxODUsMTc3NjAxMTEwMyw4MzMxODE4OTcsMTg1NjgyODI5
-MV19
+eyJoaXN0b3J5IjpbLTgzOTczOTczNywtMTkyMjk2MzE3MCwxMj
+M3MjkyMTg1LDE3NzYwMTExMDMsODMzMTgxODk3LDE4NTY4Mjgy
+OTFdfQ==
 -->
