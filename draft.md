@@ -1,4 +1,4 @@
-前序遍历：将字符串序列化为前序遍历生成的字符串，非空节点在字符串中为其节点值，节点之间用`,`分割。因为是不含相同值的二叉搜索树，所以反序列可以由前序遍历的结果反推树的结构。
+前序遍历：将字符串序列化为前序遍历生成的字符串，非空节点在字符串中为其节点值，节点之间用`,`分割。因为是不含相同值的二叉搜索树，所以反序列化可以由前序遍历的结果递归地求树的结构。
 ```cpp
 class Codec {
 public:
@@ -53,7 +53,7 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzOTczOTczNywtMTkyMjk2MzE3MCwxMj
+eyJoaXN0b3J5IjpbLTgzODAzMzg5MCwtMTkyMjk2MzE3MCwxMj
 M3MjkyMTg1LDE3NzYwMTExMDMsODMzMTgxODk3LDE4NTY4Mjgy
 OTFdfQ==
 -->
