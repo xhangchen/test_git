@@ -1,59 +1,28 @@
-前序遍历：将字符串序列化为前序遍历生成的字符串，非空节点在字符串中为其节点值，节点之间用`,`分割。因为是不含相同值的二叉搜索树，所以反序列化可以由前序遍历的结果递归地求树的结构。
+排序：若棋盘左上角不为 $0$ 直接返回 $false$，将坐标按坐标上的值的大小升序排序，设相邻坐标的横纵坐标绝对值为 $dx$ 和 $dy$，相邻坐标可以通过一次移动相互到达当且仅当 $min(dx,dy)=1$ 且 $max(dx,dy)=2$，遍历相邻坐标进行判断。
 ```cpp
-class Codec {
+class Solution {
 public:
-
-    // Encodes a tree to a single string.
-    string serialize(TreeNode *root) {
-        string res;
-        function<void(TreeNode *)> dfs = [&](TreeNode *cur) {//先序遍历
-            if (!cur)
-                return;
-            res.append(to_string(cur->val) + ",");
-            dfs(cur->left);
-            dfs(cur->right);
-        };
-        dfs(root);
-        if (!res.empty())
-            res.pop_back();
-        return res;
-    }
-
-    // Decodes your encoded data to tree.
-    TreeNode *deserialize(string data) {
-        auto scan = [&data](int s, int e, int &val) {//扫描data[s]开头的数val,返回其最后数位的下标
-            val = data[s] - '0';
-            while (s + 1 <= e && isdigit(data[s + 1]))
-                val = val * 10 + data[++s] - '0';
-            return s;
-        };
-
-        function<TreeNode *(int, int)> get_root = [&](int s, int e) -> TreeNode * {
-            if (s > e)
-                return nullptr;
-            int i, val_root;
-            i = scan(s, e, val_root);
-            TreeNode *root = new TreeNode(val_root);
-            int j = i + 2, tmp;
-            while (j <= e) {
-                int last = scan(j, e, tmp);
-                if (tmp < val_root)
-                    j = last + 2;
-                else {
-                    root->left = get_root(i + 2, j - 2);//生成左子树
-                    root->right = get_root(j, e);//生成右子树
-                    return root;
-                }
-            }
-            root->left = get_root(i + 2, e);//只有左子树的情况
-            return root;
-        };
-        return get_root(0, data.size() - 1);
+    bool checkValidGrid(vector<vector<int>> &grid) {
+        if (grid[0][0] != 0)
+            return false;
+        int n = grid.size();
+        vector<pair<int, int>> li(n * n);
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+                li[i * n + j] = {i, j};
+        sort(li.begin(), li.end(), [&](pair<int, int> &a, pair<int, int> &b) { return grid[a.first][a.second] < grid[b.first][b.second]; });
+        for (int i = 1; i < n * n; i++) {
+            int dx = abs(li[i].first - li[i - 1].first);
+            int dy = abs(li[i].second - li[i - 1].second);
+            if (min(dx, dy) != 1 || max(dx, dy) != 2)
+                return false;
+        }
+        return true;
     }
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzODAzMzg5MCwtMTkyMjk2MzE3MCwxMj
-M3MjkyMTg1LDE3NzYwMTExMDMsODMzMTgxODk3LDE4NTY4Mjgy
-OTFdfQ==
+eyJoaXN0b3J5IjpbLTM1MjQ1NDA4NywtODM4MDMzODkwLC0xOT
+IyOTYzMTcwLDEyMzcyOTIxODUsMTc3NjAxMTEwMyw4MzMxODE4
+OTcsMTg1NjgyODI5MV19
 -->
