@@ -7,9 +7,9 @@ public:
         for (auto &pi: prerequisites)
             e[pi[1]].push_back(pi[0]);
         vector<int> vis(numCourses, -1);
-        int is[numCourses][numCourses];//is[j][i]: j是否是i
+        int is[numCourses][numCourses];//is[j][i]: j是否是i的先决条件
         memset(is, 0, sizeof(is));
-        for (int i = 0; i < numCourses; i++) {
+        for (int i = 0; i < numCourses; i++) {//枚举i
             queue<int> q;
             q.push(i);
             vis[i] = i;
@@ -34,8 +34,8 @@ public:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyODMxNDkzNiwtODM3NjUxNzQ2LC01Mj
-c3OTU0NTQsLTgzODAzMzg5MCwtMTkyMjk2MzE3MCwxMjM3Mjky
-MTg1LDE3NzYwMTExMDMsODMzMTgxODk3LDE4NTY4MjgyOTFdfQ
-==
+eyJoaXN0b3J5IjpbLTE1MDM0MTIwMjksLTgzNzY1MTc0NiwtNT
+I3Nzk1NDU0LC04MzgwMzM4OTAsLTE5MjI5NjMxNzAsMTIzNzI5
+MjE4NSwxNzc2MDExMTAzLDgzMzE4MTg5NywxODU2ODI4MjkxXX
+0=
 -->
