@@ -1,4 +1,4 @@
-$bfs$ : 首先建图：存在边$u\to v$ 当且仅当 $v$ 是 $u$ 的直接先修课程，然后遍历每个点 $i$ ，以 $i$ 为源点跑 $bfs$ ， $bfs$ 过程中
+$bfs$ : 首先建图：存在边$u\to v$ 当且仅当 $v$ 是 $u$ 的直接先修课程，然后遍历每个点 $i$ ，以 $i$ 为源点跑 $bfs$ ， $bfs$ 过程中访问的点 $j$ 都是 $i$ 的先决条件。
 ```cpp
 class Solution {
 public:
@@ -7,7 +7,7 @@ public:
         for (auto &pi: prerequisites)
             e[pi[1]].push_back(pi[0]);
         vector<int> vis(numCourses, -1);
-        int is[numCourses][numCourses];
+        int is[numCourses][numCourses];//is[j][i]: j是否是i
         memset(is, 0, sizeof(is));
         for (int i = 0; i < numCourses; i++) {
             queue<int> q;
@@ -34,7 +34,7 @@ public:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5Njk0MzEzNywtODM3NjUxNzQ2LC01Mj
+eyJoaXN0b3J5IjpbMTkyODMxNDkzNiwtODM3NjUxNzQ2LC01Mj
 c3OTU0NTQsLTgzODAzMzg5MCwtMTkyMjk2MzE3MCwxMjM3Mjky
 MTg1LDE3NzYwMTExMDMsODMzMTgxODk3LDE4NTY4MjgyOTFdfQ
 ==
