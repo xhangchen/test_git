@@ -1,4 +1,4 @@
-离散化+差分数组：先离散化把值域范围缩小，然后用差分数组+前缀和计算各个日期花的数目
+离散化+差分数组：先离散化把值域范围缩小，然后用差分数组+前缀和计算各个日期在花期内的花的数目
 ```cpp
 class Solution {
 public:
@@ -18,7 +18,7 @@ public:
             a[lower_bound(s.begin(), s.end(), x[0]) - s.begin()]++;
             a[lower_bound(s.begin(), s.end(), x[1]) - s.begin() + 1]--;
         }
-        partial_sum(a.begin(), a.end(), a.begin());//ch
+        partial_sum(a.begin(), a.end(), a.begin());//差分数组上的前缀和即为各个日期在花期内的花的数目
         vector<int> res;
         for (auto x: people)
             res.push_back(a[lower_bound(s.begin(), s.end(), x) - s.begin()]);
@@ -27,9 +27,9 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA5MDQwMDAwLC0xNTAyNzE5NzUyLC0xMz
-QzNTA2NTE1LC0yMDg4NzQ2NjEyLC0xNTAzNDEyMDI5LC04Mzc2
-NTE3NDYsLTUyNzc5NTQ1NCwtODM4MDMzODkwLC0xOTIyOTYzMT
-cwLDEyMzcyOTIxODUsMTc3NjAxMTEwMyw4MzMxODE4OTcsMTg1
-NjgyODI5MV19
+eyJoaXN0b3J5IjpbLTE2NDY4NTA0MCwtMTUwMjcxOTc1MiwtMT
+M0MzUwNjUxNSwtMjA4ODc0NjYxMiwtMTUwMzQxMjAyOSwtODM3
+NjUxNzQ2LC01Mjc3OTU0NTQsLTgzODAzMzg5MCwtMTkyMjk2Mz
+E3MCwxMjM3MjkyMTg1LDE3NzYwMTExMDMsODMzMTgxODk3LDE4
+NTY4MjgyOTFdfQ==
 -->
