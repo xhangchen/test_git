@@ -1,4 +1,4 @@
-模拟
+离散化+差分数组：先离散化把值域范围缩小，然后用差分数组+前缀和计算各个日期的
 ```cpp
 class Solution {
 public:
@@ -28,9 +28,9 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDI3MTk3NTIsLTEzNDM1MDY1MTUsLT
-IwODg3NDY2MTIsLTE1MDM0MTIwMjksLTgzNzY1MTc0NiwtNTI3
-Nzk1NDU0LC04MzgwMzM4OTAsLTE5MjI5NjMxNzAsMTIzNzI5Mj
-E4NSwxNzc2MDExMTAzLDgzMzE4MTg5NywxODU2ODI4MjkxXX0=
-
+eyJoaXN0b3J5IjpbMTY4NjMxNzEzNSwtMTUwMjcxOTc1MiwtMT
+M0MzUwNjUxNSwtMjA4ODc0NjYxMiwtMTUwMzQxMjAyOSwtODM3
+NjUxNzQ2LC01Mjc3OTU0NTQsLTgzODAzMzg5MCwtMTkyMjk2Mz
+E3MCwxMjM3MjkyMTg1LDE3NzYwMTExMDMsODMzMTgxODk3LDE4
+NTY4MjgyOTFdfQ==
 -->
