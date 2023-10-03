@@ -5,36 +5,36 @@ max(p_{i-1,j},p_{i,j-1}+prices[i]  )  & ,j\%2\ne 0
 \end{matrix}\right.$
 
 ```cpp
-class Solution {  
-public:  
-    int maxProfit(int k, vector<int> &prices) {  
-        int n = prices.size();  
-  int p[n + 1][k * 2 + 1];  
-  for (int j = 1; j <= k * 2; j++)  
-            p[0][j] = INT32_MIN;//wu'xian  
-  p[0][0] = 0;  
-  for (int i = 0; i < n; ++i) {  
-            p[i + 1][0] = 0;  
-  for (int j = 1; j <= k * 2; j++) {  
-                p[i + 1][j] = INT32_MIN;  
-  if (p[i][j] != INT32_MIN)  
-                    p[i + 1][j] = max(p[i + 1][j], p[i][j]);  
-  if (p[i][j - 1] != INT32_MIN)  
-                    p[i + 1][j] = max(p[i + 1][j], p[i][j - 1] + (j & 1 ? -prices[i] : prices[i]));  
-  }  
-        }  
-        int res = 0;  
-  for (int j = 2; j <= 2 * k; j++)  
-            if (p[n][j] != INT32_MIN)  
-                res = max(res, p[n][j]);  
-  return res;  
-  }  
+class Solution {
+public:
+    int maxProfit(int k, vector<int> &prices) {
+        int n = prices.size();
+        int p[n + 1][k * 2 + 1];
+        for (int j = 1; j <= k * 2; j++)
+            p[0][j] = INT32_MIN;//标志无效状态
+        p[0][0] = 0;  //初始状态
+        for (int i = 0; i < n; ++i) {
+            p[i + 1][0] = 0;
+            for (int j = 1; j <= k * 2; j++) {
+                p[i + 1][j] = INT32_MIN;
+                if (p[i][j] != INT32_MIN)
+                    p[i + 1][j] = max(p[i + 1][j], p[i][j]);
+                if (p[i][j - 1] != INT32_MIN)
+                    p[i + 1][j] = max(p[i + 1][j], p[i][j - 1] + (j & 1 ? -prices[i] : prices[i]));
+            }
+        }
+        int res = 0;
+        for (int j = 2; j <= 2 * k; j++)
+            if (p[n][j] != INT32_MIN)
+                res = max(res, p[n][j]);
+        return res;
+    }
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MjA3MTcwNCwtMjEyMTA1OTYyMywtMT
-Y0Njg1MDQwLC0xNTAyNzE5NzUyLC0xMzQzNTA2NTE1LC0yMDg4
-NzQ2NjEyLC0xNTAzNDEyMDI5LC04Mzc2NTE3NDYsLTUyNzc5NT
-Q1NCwtODM4MDMzODkwLC0xOTIyOTYzMTcwLDEyMzcyOTIxODUs
-MTc3NjAxMTEwMyw4MzMxODE4OTcsMTg1NjgyODI5MV19
+eyJoaXN0b3J5IjpbNjExMDUyNTIzLC0yMTIxMDU5NjIzLC0xNj
+Q2ODUwNDAsLTE1MDI3MTk3NTIsLTEzNDM1MDY1MTUsLTIwODg3
+NDY2MTIsLTE1MDM0MTIwMjksLTgzNzY1MTc0NiwtNTI3Nzk1ND
+U0LC04MzgwMzM4OTAsLTE5MjI5NjMxNzAsMTIzNzI5MjE4NSwx
+Nzc2MDExMTAzLDgzMzE4MTg5NywxODU2ODI4MjkxXX0=
 -->
