@@ -1,4 +1,4 @@
-动态规划：设 $p[]$ 
+动态规划：设 $p[i][j]$ 为在 $prices[0,i-1]$ 中cao
 
 ```cpp
 class Solution {  
@@ -28,7 +28,7 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE4OTM3MzIxLC0yMTIxMDU5NjIzLC0xNj
+eyJoaXN0b3J5IjpbODM1Mjg1NTAxLC0yMTIxMDU5NjIzLC0xNj
 Q2ODUwNDAsLTE1MDI3MTk3NTIsLTEzNDM1MDY1MTUsLTIwODg3
 NDY2MTIsLTE1MDM0MTIwMjksLTgzNzY1MTc0NiwtNTI3Nzk1ND
 U0LC04MzgwMzM4OTAsLTE5MjI5NjMxNzAsMTIzNzI5MjE4NSwx
