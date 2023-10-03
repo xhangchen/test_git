@@ -1,5 +1,8 @@
 动态规划：设 $p_{i,j}$ 为在 $prices[0,i-1]$ 中操作了 $j$ 次（买卖一只股票算两次操作）的最大收益，有状态转移方程：
-
+$p_{i,j}=\left\{\begin{matrix}
+max(p_{i-1,j},p_{i,j-1}-prices[i]  )  & , j\%2=0\\
+max(p_{i-1,j},p_{i,j-1}+prices[i]  )  & ,j\%2\ne 0
+\end{matrix}\right.$
 
 ```cpp
 class Solution {  
@@ -8,7 +11,7 @@ public:
         int n = prices.size();  
   int p[n + 1][k * 2 + 1];  
   for (int j = 1; j <= k * 2; j++)  
-            p[0][j] = INT32_MIN;  
+            p[0][j] = INT32_MIN;//wu'xian  
   p[0][0] = 0;  
   for (int i = 0; i < n; ++i) {  
             p[i + 1][0] = 0;  
@@ -29,7 +32,7 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MjE3MTE2OCwtMjEyMTA1OTYyMywtMT
+eyJoaXN0b3J5IjpbMTk1MjA3MTcwNCwtMjEyMTA1OTYyMywtMT
 Y0Njg1MDQwLC0xNTAyNzE5NzUyLC0xMzQzNTA2NTE1LC0yMDg4
 NzQ2NjEyLC0xNTAzNDEyMDI5LC04Mzc2NTE3NDYsLTUyNzc5NT
 Q1NCwtODM4MDMzODkwLC0xOTIyOTYzMTcwLDEyMzcyOTIxODUs
