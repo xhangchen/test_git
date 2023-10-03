@@ -1,4 +1,5 @@
-动态规划：设 $p[i][j]$ 为在 $prices[0,i-1]$ 中操作了 $j$ 次（买卖一只股票算两次）的最大收益，有
+动态规划：设 $p[i][j]$ 为在 $prices[0,i-1]$ 中操作了 $j$ 次（买卖一只股票算两次ca）的最大收益，有状态转移方程：
+
 
 ```cpp
 class Solution {  
@@ -28,7 +29,7 @@ public:
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NjIwMTcxMiwtMjEyMTA1OTYyMywtMT
+eyJoaXN0b3J5IjpbLTY4MjUzOTU1MCwtMjEyMTA1OTYyMywtMT
 Y0Njg1MDQwLC0xNTAyNzE5NzUyLC0xMzQzNTA2NTE1LC0yMDg4
 NzQ2NjEyLC0xNTAzNDEyMDI5LC04Mzc2NTE3NDYsLTUyNzc5NT
 Q1NCwtODM4MDMzODkwLC0xOTIyOTYzMTcwLDEyMzcyOTIxODUs
