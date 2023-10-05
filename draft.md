@@ -29,8 +29,9 @@ Verify correctness of serialization and deserialization of nested and custom typ
 The server provides RPC services, and the client requests the corresponding RPC services.
 
 ## register_server | register_client
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk4MTgwMzc1LDI5NDg3NzM4MCw2MTEwNT
+eyJoaXN0b3J5IjpbMjg1NzgwMTAxLDI5NDg3NzM4MCw2MTEwNT
 I1MjMsLTIxMjEwNTk2MjMsLTE2NDY4NTA0MCwtMTUwMjcxOTc1
 MiwtMTM0MzUwNjUxNSwtMjA4ODc0NjYxMiwtMTUwMzQxMjAyOS
 wtODM3NjUxNzQ2LC01Mjc3OTU0NTQsLTgzODAzMzg5MCwtMTky
