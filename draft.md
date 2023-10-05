@@ -1,40 +1,11 @@
-动态规划：设 $p_{i,j}$ 为在 $prices[0,i-1]$ 中操作了 $j$ 次（买卖一只股票算两次操作）的最大收益，有状态转移方程：
-$p_{i,j}=\left\{\begin{matrix}
-max(p_{i-1,j},p_{i,j-1}-prices[i]  )  & , j\%2=0\\
-max(p_{i-1,j},p_{i,j-1}+prices[i]  )  & ,j\%2\ne 0
-\end{matrix}\right.$
+##  mapreduce
 
-```cpp
-class Solution {
-public:
-    int maxProfit(int k, vector<int> &prices) {
-        int n = prices.size();
-        int p[n + 1][k * 2 + 1];
-        for (int j = 1; j <= k * 2; j++)
-            p[0][j] = INT32_MIN;//标志无效状态
-        p[0][0] = 0;  //初始状态
-        for (int i = 0; i < n; ++i) {
-            p[i + 1][0] = 0;
-            for (int j = 1; j <= k * 2; j++) {
-                p[i + 1][j] = INT32_MIN;
-                if (p[i][j] != INT32_MIN)
-                    p[i + 1][j] = max(p[i + 1][j], p[i][j]);
-                if (p[i][j - 1] != INT32_MIN)
-                    p[i + 1][j] = max(p[i + 1][j], p[i][j - 1] + (j & 1 ? -prices[i] : prices[i]));
-            }
-        }
-        int res = 0;
-        for (int j = 2; j <= 2 * k; j++)
-            if (p[n][j] != INT32_MIN)
-                res = max(res, p[n][j]);
-        return res;
-    }
-};
-```
+### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjExMDUyNTIzLC0yMTIxMDU5NjIzLC0xNj
-Q2ODUwNDAsLTE1MDI3MTk3NTIsLTEzNDM1MDY1MTUsLTIwODg3
-NDY2MTIsLTE1MDM0MTIwMjksLTgzNzY1MTc0NiwtNTI3Nzk1ND
-U0LC04MzgwMzM4OTAsLTE5MjI5NjMxNzAsMTIzNzI5MjE4NSwx
-Nzc2MDExMTAzLDgzMzE4MTg5NywxODU2ODI4MjkxXX0=
+eyJoaXN0b3J5IjpbMTM3NTE4OTYwNSw2MTEwNTI1MjMsLTIxMj
+EwNTk2MjMsLTE2NDY4NTA0MCwtMTUwMjcxOTc1MiwtMTM0MzUw
+NjUxNSwtMjA4ODc0NjYxMiwtMTUwMzQxMjAyOSwtODM3NjUxNz
+Q2LC01Mjc3OTU0NTQsLTgzODAzMzg5MCwtMTkyMjk2MzE3MCwx
+MjM3MjkyMTg1LDE3NzYwMTExMDMsODMzMTgxODk3LDE4NTY4Mj
+gyOTFdfQ==
 -->
