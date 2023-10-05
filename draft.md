@@ -19,14 +19,16 @@ Record the time taken by the ordinary linear scan method.
 ## check_result
 Verify the correctness of mapreduce calculation results.
 
+
 # RPC
 
-##
+## test_serialization&deserialization
+Verify correctness of serialization and deserialization of nested and custom types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3Njg1NDExNSwyOTQ4NzczODAsNjExMD
-UyNTIzLC0yMTIxMDU5NjIzLC0xNjQ2ODUwNDAsLTE1MDI3MTk3
-NTIsLTEzNDM1MDY1MTUsLTIwODg3NDY2MTIsLTE1MDM0MTIwMj
-ksLTgzNzY1MTc0NiwtNTI3Nzk1NDU0LC04MzgwMzM4OTAsLTE5
-MjI5NjMxNzAsMTIzNzI5MjE4NSwxNzc2MDExMTAzLDgzMzE4MT
-g5NywxODU2ODI4MjkxXX0=
+eyJoaXN0b3J5IjpbMTQzNDI0OTMzLDI5NDg3NzM4MCw2MTEwNT
+I1MjMsLTIxMjEwNTk2MjMsLTE2NDY4NTA0MCwtMTUwMjcxOTc1
+MiwtMTM0MzUwNjUxNSwtMjA4ODc0NjYxMiwtMTUwMzQxMjAyOS
+wtODM3NjUxNzQ2LC01Mjc3OTU0NTQsLTgzODAzMzg5MCwtMTky
+Mjk2MzE3MCwxMjM3MjkyMTg1LDE3NzYwMTExMDMsODMzMTgxOD
+k3LDE4NTY4MjgyOTFdfQ==
 -->
