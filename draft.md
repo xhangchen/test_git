@@ -1,15 +1,18 @@
-##  mapreduce
+#  mapreduce
 
-### preprocess
+## preprocess
 Generate random initial input files `input.txt`
 
-###   mapreduce
+##   mapreduce
+###  split_init_input 
+
+###  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjI0NDczOTcsNjExMDUyNTIzLC0yMT
-IxMDU5NjIzLC0xNjQ2ODUwNDAsLTE1MDI3MTk3NTIsLTEzNDM1
-MDY1MTUsLTIwODg3NDY2MTIsLTE1MDM0MTIwMjksLTgzNzY1MT
-c0NiwtNTI3Nzk1NDU0LC04MzgwMzM4OTAsLTE5MjI5NjMxNzAs
-MTIzNzI5MjE4NSwxNzc2MDExMTAzLDgzMzE4MTg5NywxODU2OD
-I4MjkxXX0=
+eyJoaXN0b3J5IjpbMTI3MDA1MjI0OCw2MTEwNTI1MjMsLTIxMj
+EwNTk2MjMsLTE2NDY4NTA0MCwtMTUwMjcxOTc1MiwtMTM0MzUw
+NjUxNSwtMjA4ODc0NjYxMiwtMTUwMzQxMjAyOSwtODM3NjUxNz
+Q2LC01Mjc3OTU0NTQsLTgzODAzMzg5MCwtMTkyMjk2MzE3MCwx
+MjM3MjkyMTg1LDE3NzYwMTExMDMsODMzMTgxODk3LDE4NTY4Mj
+gyOTFdfQ==
 -->
