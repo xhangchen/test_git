@@ -7,6 +7,7 @@ Generate random initial input files $\text{input.txt}$
 
 ###  `split_init_input`
 Preprocessing before calculation: divide $\text{input.txt}$ into $m$ (number of map nodes) sub-files $\text{input0.txt},\cdots,\text{input(m-1).txt}$
+
 ### `master_node_task`
 
 
@@ -14,10 +15,10 @@ Preprocessing before calculation: divide $\text{input.txt}$ into $m$ (number of 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk0ODc3MzgwLDYxMTA1MjUyMywtMjEyMT
-A1OTYyMywtMTY0Njg1MDQwLC0xNTAyNzE5NzUyLC0xMzQzNTA2
-NTE1LC0yMDg4NzQ2NjEyLC0xNTAzNDEyMDI5LC04Mzc2NTE3ND
-YsLTUyNzc5NTQ1NCwtODM4MDMzODkwLC0xOTIyOTYzMTcwLDEy
-MzcyOTIxODUsMTc3NjAxMTEwMyw4MzMxODE4OTcsMTg1NjgyOD
-I5MV19
+eyJoaXN0b3J5IjpbLTQ2Nzg1OTA4NiwyOTQ4NzczODAsNjExMD
+UyNTIzLC0yMTIxMDU5NjIzLC0xNjQ2ODUwNDAsLTE1MDI3MTk3
+NTIsLTEzNDM1MDY1MTUsLTIwODg3NDY2MTIsLTE1MDM0MTIwMj
+ksLTgzNzY1MTc0NiwtNTI3Nzk1NDU0LC04MzgwMzM4OTAsLTE5
+MjI5NjMxNzAsMTIzNzI5MjE4NSwxNzc2MDExMTAzLDgzMzE4MT
+g5NywxODU2ODI4MjkxXX0=
 -->
