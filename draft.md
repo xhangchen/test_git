@@ -9,16 +9,16 @@ Generate random initial input files $\text{input.txt}$
 Preprocessing before calculation: divide $\text{input.txt}$ into $m$ (number of map nodes) sub-files $\text{input0.txt},\cdots,\text{input(m-1).txt}$
 
 ### `master_node_task`
-
+The master node creates threads that execute map tasks and reduce tasks, and checks whether their respective outputs are complete. If they are incomplete, restart the corresponding tasks.
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2Nzg1OTA4NiwyOTQ4NzczODAsNjExMD
-UyNTIzLC0yMTIxMDU5NjIzLC0xNjQ2ODUwNDAsLTE1MDI3MTk3
-NTIsLTEzNDM1MDY1MTUsLTIwODg3NDY2MTIsLTE1MDM0MTIwMj
-ksLTgzNzY1MTc0NiwtNTI3Nzk1NDU0LC04MzgwMzM4OTAsLTE5
-MjI5NjMxNzAsMTIzNzI5MjE4NSwxNzc2MDExMTAzLDgzMzE4MT
-g5NywxODU2ODI4MjkxXX0=
+eyJoaXN0b3J5IjpbLTEzNTQzNjE4MjQsMjk0ODc3MzgwLDYxMT
+A1MjUyMywtMjEyMTA1OTYyMywtMTY0Njg1MDQwLC0xNTAyNzE5
+NzUyLC0xMzQzNTA2NTE1LC0yMDg4NzQ2NjEyLC0xNTAzNDEyMD
+I5LC04Mzc2NTE3NDYsLTUyNzc5NTQ1NCwtODM4MDMzODkwLC0x
+OTIyOTYzMTcwLDEyMzcyOTIxODUsMTc3NjAxMTEwMyw4MzMxOD
+E4OTcsMTg1NjgyODI5MV19
 -->
