@@ -14,9 +14,16 @@ The master node creates threads that execute map tasks and reduce tasks, and che
 
 ## cmp_serial_method
 
-Record the time taken by the ordinary linear scan method
+Record the time taken by the ordinary linear scan method.
+
+## check_result
+Verify the correctness of mapreduce calculation results.
+
+# RPC
+
+##
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NzM3MzAyNiwyOTQ4NzczODAsNjExMD
+eyJoaXN0b3J5IjpbMTM3Njg1NDExNSwyOTQ4NzczODAsNjExMD
 UyNTIzLC0yMTIxMDU5NjIzLC0xNjQ2ODUwNDAsLTE1MDI3MTk3
 NTIsLTEzNDM1MDY1MTUsLTIwODg3NDY2MTIsLTE1MDM0MTIwMj
 ksLTgzNzY1MTc0NiwtNTI3Nzk1NDU0LC04MzgwMzM4OTAsLTE5
