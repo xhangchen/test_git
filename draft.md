@@ -22,13 +22,16 @@ Verify the correctness of mapreduce calculation results.
 
 # RPC
 
-## test_serialization&deserialization
+## test_serialization_deserialization
 Verify correctness of serialization and deserialization of nested and custom types.
+
+## server & client
+The server provides RPC services, and the client requests the corresponding RPC services.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNDI0OTMzLDI5NDg3NzM4MCw2MTEwNT
-I1MjMsLTIxMjEwNTk2MjMsLTE2NDY4NTA0MCwtMTUwMjcxOTc1
-MiwtMTM0MzUwNjUxNSwtMjA4ODc0NjYxMiwtMTUwMzQxMjAyOS
-wtODM3NjUxNzQ2LC01Mjc3OTU0NTQsLTgzODAzMzg5MCwtMTky
-Mjk2MzE3MCwxMjM3MjkyMTg1LDE3NzYwMTExMDMsODMzMTgxOD
-k3LDE4NTY4MjgyOTFdfQ==
+eyJoaXN0b3J5IjpbLTIwNTQyNzM3NzMsMjk0ODc3MzgwLDYxMT
+A1MjUyMywtMjEyMTA1OTYyMywtMTY0Njg1MDQwLC0xNTAyNzE5
+NzUyLC0xMzQzNTA2NTE1LC0yMDg4NzQ2NjEyLC0xNTAzNDEyMD
+I5LC04Mzc2NTE3NDYsLTUyNzc5NTQ1NCwtODM4MDMzODkwLC0x
+OTIyOTYzMTcwLDEyMzcyOTIxODUsMTc3NjAxMTEwMyw4MzMxOD
+E4OTcsMTg1NjgyODI5MV19
 -->
