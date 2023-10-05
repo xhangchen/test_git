@@ -29,12 +29,12 @@ Verify correctness of serialization and deserialization of nested and custom typ
 The server provides RPC services, and the client requests the corresponding RPC services.
 
 ## register_server | register_client
-Register_server is the registration center. Users who provide RPC serve as `register_client` to register the services they provide to the registration center. Users who query RPC serve as `query_client` to query the registration center for the information they need services.
+register_server is the registration center. The RPC server acts as a `register_client` to register the services it provides to the registration center. The RPC client acts as a `query_client` to query the registration center for information about the services it needs.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUxMTkxMjQ1LDI4NTc4MDEwMSwyOTQ4Nz
-czODAsNjExMDUyNTIzLC0yMTIxMDU5NjIzLC0xNjQ2ODUwNDAs
-LTE1MDI3MTk3NTIsLTEzNDM1MDY1MTUsLTIwODg3NDY2MTIsLT
-E1MDM0MTIwMjksLTgzNzY1MTc0NiwtNTI3Nzk1NDU0LC04Mzgw
-MzM4OTAsLTE5MjI5NjMxNzAsMTIzNzI5MjE4NSwxNzc2MDExMT
-AzLDgzMzE4MTg5NywxODU2ODI4MjkxXX0=
+eyJoaXN0b3J5IjpbMTAyNzA0NjExOSwyODU3ODAxMDEsMjk0OD
+c3MzgwLDYxMTA1MjUyMywtMjEyMTA1OTYyMywtMTY0Njg1MDQw
+LC0xNTAyNzE5NzUyLC0xMzQzNTA2NTE1LC0yMDg4NzQ2NjEyLC
+0xNTAzNDEyMDI5LC04Mzc2NTE3NDYsLTUyNzc5NTQ1NCwtODM4
+MDMzODkwLC0xOTIyOTYzMTcwLDEyMzcyOTIxODUsMTc3NjAxMT
+EwMyw4MzMxODE4OTcsMTg1NjgyODI5MV19
 -->
