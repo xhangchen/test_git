@@ -29,16 +29,19 @@ Verify correctness of serialization and deserialization of nested and custom typ
 The server provides RPC services, and the client requests the corresponding RPC services.
 
 ## test_rwlock
+Test read-write locks based on timing fairness.
+
+
 
 
 ## register_server | register_client | query_client
 register_server is the registration center. The RPC server acts as a `register_client` to register the services it provides to the registration center. The RPC client acts as a `query_client` to query the registration center for information about the services it needs.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTEzMzY3MTYsMTAyNzA0NjExOSwyOD
-U3ODAxMDEsMjk0ODc3MzgwLDYxMTA1MjUyMywtMjEyMTA1OTYy
-MywtMTY0Njg1MDQwLC0xNTAyNzE5NzUyLC0xMzQzNTA2NTE1LC
-0yMDg4NzQ2NjEyLC0xNTAzNDEyMDI5LC04Mzc2NTE3NDYsLTUy
-Nzc5NTQ1NCwtODM4MDMzODkwLC0xOTIyOTYzMTcwLDEyMzcyOT
-IxODUsMTc3NjAxMTEwMyw4MzMxODE4OTcsMTg1NjgyODI5MV19
+eyJoaXN0b3J5IjpbLTEzNTI1MTE1MywxMDI3MDQ2MTE5LDI4NT
+c4MDEwMSwyOTQ4NzczODAsNjExMDUyNTIzLC0yMTIxMDU5NjIz
+LC0xNjQ2ODUwNDAsLTE1MDI3MTk3NTIsLTEzNDM1MDY1MTUsLT
+IwODg3NDY2MTIsLTE1MDM0MTIwMjksLTgzNzY1MTc0NiwtNTI3
+Nzk1NDU0LC04MzgwMzM4OTAsLTE5MjI5NjMxNzAsMTIzNzI5Mj
+E4NSwxNzc2MDExMTAzLDgzMzE4MTg5NywxODU2ODI4MjkxXX0=
 
 -->
