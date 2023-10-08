@@ -1,48 +1,11 @@
-#  mapreduce
 
-## preprocess
-Generate random initial input files $\text{input.txt}$ .
-
-##   mapreduce
-
-###  `split_init_input`
-Preprocessing before calculation: divide $\text{input.txt}$ into $m$ (number of map nodes) sub-files $\text{input0.txt},\cdots,\text{input(m-1).txt}$ .
-
-### `master_node_task`
-The master node creates threads that execute map tasks and reduce tasks, and checks whether their respective outputs are complete. If the output of a task is incomplete, the master node restarts the corresponding task.
-
-
-## cmp_serial_method
-
-Record the time taken by the ordinary linear scan method.
-
-## check_result
-Verify the correctness of mapreduce calculation results.
-
-
-# RPC
-
-## test_serialization_deserialization
-Verify correctness of serialization and deserialization of nested and custom types.
-
-## server | client
-The server provides RPC services, and the client requests the corresponding RPC services.
-
-## test_rwlock
-Test read-write locks based on timing fairness.
-
-## test_distributed_lock
-Test the distributed lock implemented based on Redis + Lua.
-
-
-## register_server | register_client | query_client
-register_server is the registration center. The RPC server acts as a `register_client` to register the services it provides to the registration center. The RPC client acts as a `query_client` to query the registration center for information about the services it needs.
+因为求 $p_{i,k}$ 时考虑了 ($i$ 和 $k$ 反转)+ $p_{i+1,k-1}$ 这种情况了，所以 $p_{i,k}$ 不大于 ($i$ 和 $k$ 反转)+ $p_{i+1,k-1}$ 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODE5MzkxNTIsMTAyNzA0NjExOSwyOD
-U3ODAxMDEsMjk0ODc3MzgwLDYxMTA1MjUyMywtMjEyMTA1OTYy
-MywtMTY0Njg1MDQwLC0xNTAyNzE5NzUyLC0xMzQzNTA2NTE1LC
-0yMDg4NzQ2NjEyLC0xNTAzNDEyMDI5LC04Mzc2NTE3NDYsLTUy
-Nzc5NTQ1NCwtODM4MDMzODkwLC0xOTIyOTYzMTcwLDEyMzcyOT
-IxODUsMTc3NjAxMTEwMyw4MzMxODE4OTcsMTg1NjgyODI5MV19
-
+eyJoaXN0b3J5IjpbLTY3MjI5MDU3NSwtMTg4MTkzOTE1MiwxMD
+I3MDQ2MTE5LDI4NTc4MDEwMSwyOTQ4NzczODAsNjExMDUyNTIz
+LC0yMTIxMDU5NjIzLC0xNjQ2ODUwNDAsLTE1MDI3MTk3NTIsLT
+EzNDM1MDY1MTUsLTIwODg3NDY2MTIsLTE1MDM0MTIwMjksLTgz
+NzY1MTc0NiwtNTI3Nzk1NDU0LC04MzgwMzM4OTAsLTE5MjI5Nj
+MxNzAsMTIzNzI5MjE4NSwxNzc2MDExMTAzLDgzMzE4MTg5Nywx
+ODU2ODI4MjkxXX0=
 -->
